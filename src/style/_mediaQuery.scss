@@ -1,0 +1,22 @@
+// ブレイクポイントを指定
+$npc: 1024px;
+$tab: 768px;
+$sp: 480px;
+
+@mixin npc {
+  @media screen and (max-width: ($npc)) {
+    @content; //使用時に記述したコードを mixin に渡す
+  }
+}
+
+@mixin tab {
+  @media screen and (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}

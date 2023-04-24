@@ -1,0 +1,173 @@
+@import "./mediaQuery";
+
+$buttonColor: #85c8c5;
+$fontColor: #383838;
+#home {
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url("../../public/images/restaurant.webp");
+    background-repeat: repeat;
+    background-size: cover;
+
+    a {
+      text-decoration: none;
+    }
+
+    code {
+      font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+    }
+  }
+
+  header {
+    background: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    margin-bottom: 1vh;
+
+    h1 {
+      display: inline-block;
+      text-align: center;
+      font-size: 28px;
+      font-weight: 800;
+      margin: 0.3em 0;
+    }
+  }
+
+  .DXC-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 2vh;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 3vh;
+
+    .column-contents {
+      flex: 1;
+      margin: 1vh;
+
+      .box {
+        display: inline-block;
+        margin-bottom: 3vh;
+        width: 90%;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        background-color: #fff;
+        border-radius: 14px;
+        box-shadow: 0 0 12px gray;
+
+        .parent-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+
+          .gauge-graph {
+            margin-top: 2vh;
+            height: 31vh;
+            width: 31vh;
+
+            @include npc {
+              // ここに入るコードを@contentとして mixin に渡す
+              height: 25vh;
+              width: 25vh;
+            }
+
+            @include tab {
+              height: 15vh;
+              width: 15vh;
+            }
+
+            @include sp {
+              height: 10vh;
+              width: 10vh;
+            }
+          }
+        }
+
+        .conferenceRoom {
+          padding-top: 2vh;
+          padding-bottom: 1vh;
+          max-width: 80%;
+        }
+
+        h2 {
+          font-size: 1em;
+          font-weight: 600;
+          padding-top: 0.5em;
+          padding-bottom: 0.5em;
+          color: $fontColor;
+        }
+
+        p {
+          font-weight: 600;
+          color: $fontColor;
+        }
+
+        .comment {
+          padding-top: 0.5em;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .btn {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 0.5em 2em;
+    display: inline-block;
+    margin: 0.5em 1.2em 0.7em 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+
+    &-6 {
+      color: #fff;
+      background: $buttonColor;
+      -webkit-transition: none;
+      -moz-transition: none;
+      transition: none;
+      &:active {
+        top: 2px;
+      }
+    }
+
+    &-6c {
+      border: 2px solid $buttonColor;
+      border-radius: 60px;
+      &:hover {
+        background: transparent;
+        color: $buttonColor;
+      }
+    }
+  }
+}
