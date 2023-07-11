@@ -22,6 +22,13 @@ If you want to make changes, please install a Live Server or similar in vscode a
 2. Go to the path you cloned and run `> npm install`.
 3. Run `> npm start`
 
+## 🔧 Technology Stack
+### Frontend
+[![My Skills](https://skillicons.dev/icons?i=js,react,nodejs,scss,bootstrap)](https://skillicons.dev)
+### Backend
+[![My Skills](https://skillicons.dev/icons?i=py,firebase)](https://skillicons.dev)
+### Other
+[![My Skills](https://skillicons.dev/icons?i=github)](https://skillicons.dev)
 
 ## 🔓 License
 
